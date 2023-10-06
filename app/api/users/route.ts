@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server"
 
 import {
   getUsers,
@@ -6,15 +6,22 @@ import {
   createUser,
   updateUser,
   deleteUser,
-} from '../../../mocks/users/data';
+} from "../../../mocks/users/data"
 
 export async function GET(req: Request, res: Response) {
-  return NextResponse.json(getUsers());
+  return NextResponse.json(getUsers())
 }
 
 export async function POST(req: Request, res: Response) {
-  const body = await req.json();
-  const newUser = body;
-  createUser(newUser);
-  return NextResponse.json(newUser);
+  const body = await req.json()
+  const newUser = body
+  createUser(newUser)
+  return NextResponse.json(newUser)
+}
+
+export async function DELETE(req: Request, res: Response) {
+  const body = await req.json()
+  const newUser = body
+  createUser(newUser)
+  return NextResponse.json(newUser)
 }
