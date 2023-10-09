@@ -6,3 +6,14 @@
   min-height: 100vh;
   min-width: 100vw;
 }
+
+
+.main{
+  flex-grow: 1;
+}
+
+
+.containerButton{
+  margin-top: 2rem;
+  text-align: center;
+}
