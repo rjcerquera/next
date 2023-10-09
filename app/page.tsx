@@ -1,7 +1,6 @@
 "use client"
 
 /* Components */
-import { Counter } from "./components/Counter/Counter"
 import { Container, Row, Col, Button } from "react-bootstrap"
 import { useRouter } from "next/navigation"
 
