@@ -1,0 +1,32 @@
+.color-green {
+  color: hsl(100, 50%, 50%);
+}
+
+.color-red {
+  color: hsl(0, 50%, 50%);
+}
+
+.color-yellow {
+  color: hsl(60, 50%, 50%);
+}
+
+.table-user {
+  td {
+    vertical-align: middle;
+  }
+
+  .cell-button {
+    text-align: center;
+
+    svg {
+      font-size: 1.5rem;
+      transition: all 0.5s;
+
+      cursor: pointer;
+      &:hover {
+        color: black;
+        transition: all 0.5s;
+      }
+    }
+  }
+}

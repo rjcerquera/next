@@ -1,11 +1,15 @@
 "use client"
 
+import { useEffect } from "react"
 import { Table } from "react-bootstrap"
 import Figure from "react-bootstrap/Figure"
 
+import { FaEye, FaPencilAlt, FaTrash } from "react-icons/fa"
+
 /* Instruments */
 import { useSelector, useDispatch, selectUser, getUsers } from "@/lib/redux"
-import { useEffect } from "react"
+
+import styles from "./styles.module.scss"
 
 export default function Usuarios() {
   const dispatch = useDispatch()
@@ -18,7 +22,7 @@ export default function Usuarios() {
   return (
     <div className="container">
       <h1>LISTADO DE USUARIOS</h1>
-      <Table striped bordered hover>
+      <Table striped bordered hover className={styles["table-user"]}>
         <thead>
           <tr>
             <th>ID</th>
@@ -27,6 +31,9 @@ export default function Usuarios() {
             <th>Edad</th>
             <th>Correo</th>
             <th>Descripción</th>
+            <th></th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -42,6 +49,15 @@ export default function Usuarios() {
               <td>{user.age}</td>
               <td>{user.email}</td>
               <td>{user.description}</td>
+              <td className={styles["cell-button"]}>
+                <FaEye className={styles["color-green"]} />
+              </td>
+              <td className={styles["cell-button"]}>
+                <FaPencilAlt className={styles["color-yellow"]} />
+              </td>
+              <td className={styles["cell-button"]}>
+                <FaTrash className={styles["color-red"]} />
+              </td>
             </tr>
           ))}
         </tbody>
